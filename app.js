@@ -29,8 +29,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 var mongoose = require('mongoose');
-const databaseUri = 'mongodb://localhost:27017/protekt';
-// const databaseUri = process.env.DATABASE_URI || 'mongodb://localhost:27017/protekt';
+// const databaseUri = 'mongodb://localhost:27017/protekt';
+const databaseUri = process.env.DATABASE_URI || 'mongodb://localhost:27017/protekt';
 mongoose.connect(databaseUri);
 
 // authorize requests
